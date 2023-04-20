@@ -1,14 +1,35 @@
-todos: [
-	{
-		text: 'Fare i compiti',
-		done: false
-	},
-	{
-		text: 'Fare la spesa',
-		done: true
-	},
-	{
-		text: 'Fare il bucato',
-		done: false
-	}
-]
+const { createApp } = Vue
+
+createApp({
+    data(){
+        return{
+
+            newTodo: ' ',
+            todos: [
+                {
+                    text: 'Fare i compiti',
+                    done: false
+                },
+                {
+                    text: 'Fare la spesa',
+                    done: true
+                },
+                {
+                    text: 'Fare il bucato',
+                    done: false
+                }
+            ]
+            
+        }
+    },
+    methods: {
+        crea(){
+            let imp= {
+                text: this.newTodo,
+                done: true
+            }
+            this.todos.push(imp)
+        }
+    }
+}).mount('#app')
+
