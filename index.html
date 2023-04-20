@@ -30,7 +30,8 @@
                 v-for="(element, index) in todos"
                 :key="index"
                 >
-                    <p class="m-0 text-dark">{{element.text}}</p>
+                    <p class="m-0 text-dark" 
+                    :class="(element.done == true) ? 'text-decoration-line-through' : ' '">{{element.text}}</p>
                     <i class="fa-solid fa-xmark"></i>
                 </div>
             </div>

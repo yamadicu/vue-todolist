@@ -24,11 +24,16 @@ createApp({
     },
     methods: {
         crea(){
+
+            
             let imp= {
                 text: this.newTodo,
-                done: true
+                done: false
             }
-            this.todos.push(imp)
+            
+            if( this.newTodo != ' '){
+                this.todos.push(imp)
+            }
         }
     }
 }).mount('#app')
