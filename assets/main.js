@@ -5,6 +5,7 @@ createApp({
         return{
 
             newTodo: ' ',
+
             todos: [
                 {
                     text: 'Fare i compiti',
@@ -19,13 +20,12 @@ createApp({
                     done: false
                 }
             ]
-            
+
         }
     },
     methods: {
         crea(){
 
-            
             let imp= {
                 text: this.newTodo,
                 done: false
@@ -34,7 +34,15 @@ createApp({
             if( this.newTodo != ' '){
                 this.todos.push(imp)
             }
+
+        },
+
+        cancella(index){
+
+            this.todos.splice(index,1)
+
         }
+
     }
 }).mount('#app')
 
